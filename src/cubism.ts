@@ -23,6 +23,14 @@ export class MetricInfo {
 }
 
 function createMetric(cubsimContext: any, metricInfo: MetricInfo): any {
+    
+    /**
+     * 
+     * Big thanks to: https://gist.github.com/cuadue/6427101
+     * For the code here, I have modified it to match my scenario.
+     * 
+     */
+    
     var buf = [], callbacks = [];
     var streamer = {
         data: function(ts, val) {
